@@ -21,7 +21,7 @@ Creates a complete `SVG` representing a macOS window.
 
 %FORK-svg example example/example%
 
-![window-terminal](images/window.svg)
+<img alt="window of a terminal" src="https://raw.github.com/svagco/window/master/images/window.svg?sanitize=true">
 
 To generate a window [without a shadow](t), the `noShadow` option can be set. When `minify` attribute is not set to `false`, the whitespace will be removed.
 
@@ -29,4 +29,4 @@ To generate a window [without a shadow](t), the `noShadow` option can be set. Wh
 
 %FORK-svg example example/no-shadow.js%
 
-![window-no-shadow](images/no-shadow.svg)
+<img alt="window without a shadow" src="https://raw.github.com/svagco/window/master/images/no-shadow.svg?sanitize=true">
