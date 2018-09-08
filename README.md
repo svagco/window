@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40svag%2Fwindow.svg)](https://npmjs.org/package/@svag/window)
 
-`@svag/window` is A simple window with a shadow and toolbar.
+`@svag/window` is a simple window with a shadow and toolbar.
 
 ```sh
 yarn add -E @svag/window
@@ -183,7 +183,7 @@ writeFileSync('images/no-shadow.svg', res)
 
 ## TODO
 
-- [ ] Add a new item to the todo list.
+- [ ] Add cursor to the preview.
 
 ## Copyright
 
