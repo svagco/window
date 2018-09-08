@@ -131,8 +131,6 @@ const res = Window({
 To generate a window <a name="without-a-shadow">without a shadow</a>, the `noShadow` option can be set. When `minify` attribute is not set to `false`, the whitespace will be removed.
 
 ```js
-import { writeFileSync } from 'fs'
-/* start example */
 import { makeElement } from '@svag/lib'
 import Window from '@svag/window'
 
@@ -165,9 +163,6 @@ const res = Window({
   content: [content, content2].join('\n'),
   noShadow: true,
 })
-
-console.log(res)
-writeFileSync('images/no-shadow.svg', res)
 ```
 
 ```svg

@@ -33,5 +33,6 @@ const res = Window({
   noShadow: true,
 })
 
+/* end example */
 console.log(res)
 writeFileSync('images/no-shadow.svg', res)
