@@ -12,6 +12,21 @@ export default class Context {
   async _init() {
     LOG('init context')
   }
+  get content() {
+    return `<rect width="${this.width - this.x}" height="${this.height - this.y}" x="${10}" y="${10}" />`
+  }
+  get y() {
+    return 10
+  }
+  get x() {
+    return 10
+  }
+  get width() {
+    return 50
+  }
+  get height() {
+    return 50
+  }
   /**
    * Example method.
    */

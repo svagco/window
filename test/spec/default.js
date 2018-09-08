@@ -1,21 +1,25 @@
-import { equal, ok } from 'zoroaster/assert'
+import { equal } from 'zoroaster/assert'
 import Context from '../context'
+import SnapshotContext from 'snapshot-context'
 import window from '../../src'
 
-/** @type {Object.<string, (c: Context)>} */
+/** @type {Object.<string, (c: Context, sc: SnapshotContext)>} */
 const T = {
-  context: Context,
+  context: [Context, SnapshotContext],
   'is a function'() {
     equal(typeof window, 'function')
   },
-  async 'calls package without error'() {
-    await window()
-  },
-  async 'gets a link to the fixture'({ FIXTURE }) {
-    const res = await window({
-      type: FIXTURE,
+  async 'produces correct output'(
+    { content, width, height, SNAPSHOT_DIR }, { setDir, test },
+  ) {
+    setDir(SNAPSHOT_DIR)
+    const res = window({
+      content,
+      height,
+      width,
+      minify: false,
     })
-    ok(res, FIXTURE)
+    await test('window.svg', res)
   },
 }
 

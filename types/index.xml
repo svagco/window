@@ -1,7 +1,46 @@
 <types>
-  <type name="Config" desc="Options for the program.">
-    <prop boolean name="shouldRun">
-      A boolean option.
+  <type name="WindowOptions">
+    <prop string name="content">
+      The content to display inside of the window.
+    </prop>
+    <prop number name="width">
+      The width of the content.
+    </prop>
+    <prop number name="height">
+      The height of the content.
+    </prop>
+    <prop string name="backgroundColor" default="#000000">
+      The color of the window.
+    </prop>
+    <prop string default="#FFFFFF" name="foregroundColor">
+      The foreground color of the container group which will hold the content.
+    </prop>
+    <prop boolean name="noStretch" default="false">
+      Do not stretch the SVG when embedded as an image. This is achieved by explicitly setting width and height attributes on the `svg` element.
+    </prop>
+    <prop opt string name="title">
+      An optional title for the window.
+    </prop>
+    <prop opt type="object" name="attributes">
+      Any additional attributes to set on the holder of the content, e.g., `font-family`.
+    </prop>
+    <prop opt number name="minWidth">
+      The minimum width that the window should take. If the content's width is greater than this value, the height will adjust to the content.
+    </prop>
+    <prop opt number name="minHeight">
+      The minimum height that the window should take. If the content's height is greater than this value, the height will adjust to the content.
+    </prop>
+    <prop number name="paddingY" default="5">
+      The padding on the Y-axis (top and bottom).
+    </prop>
+    <prop number name="paddingX" default="5">
+      The padding on the X-axis (left and right).
+    </prop>
+    <prop boolean name="noShadow" default="false">
+      Disable the dropping shadow.
+    </prop>
+    <prop boolean name="minify" default="true">
+      Remove whitespace between tags (e.g., between `>` and `<`). If there are any problems with generated SVG, this could be disabled.
     </prop>
   </type>
 </types>
