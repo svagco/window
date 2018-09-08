@@ -30,8 +30,8 @@ const res = Window({
   height: 100,
   noStretch: true,
   content: [content, content2].join('\n'),
-  minify: false,
+  noShadow: true,
 })
 
 console.log(res)
-writeFileSync('images/window.svg', res)
+writeFileSync('images/no-shadow.svg', res)

@@ -4,18 +4,29 @@
 The package is available by importing its default function:
 
 ```js
-import window from '@svag/window'
+import Window from '@svag/window'
 ```
 
-```### window
+```### window => string
 [
-  ["arg1", "string"],
-  ["arg2?", "boolean"]
+  ["options", "WindowOptions"]
 ]
 ```
 
-Call this function to get the result you want.
+Creates a complete `SVG` representing a macOS window.
+
+%TYPEDEF types/index.xml%
 
 %EXAMPLE: example/example.js, ../src => @svag/window%
 
-%FORK example example/example%
+%FORK-svg example example/example%
+
+![window-terminal](images/window.svg)
+
+To generate a window [without a shadow](t), the `noShadow` option can be set. When `minify` attribute is not set to `false`, the whitespace will be removed.
+
+%EXAMPLE: example/no-shadow.js, ../src => @svag/window%
+
+%FORK-svg example example/no-shadow.js%
+
+![window-no-shadow](images/no-shadow.svg)
