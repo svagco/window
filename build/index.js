@@ -20,7 +20,7 @@ let Shadow = require('@svag/shadow'); if (Shadow && Shadow.__esModule) Shadow = 
  * @param {boolean} [options.noShadow=false] Disable the dropping shadow. Default `false`.
  * @param {boolean} [options.minify=true] Remove whitespace between tags (e.g., between `>` and `<`). If there are any problems with generated SVG, this could be disabled. Default `true`.
  */
-const terminal = (options) => {
+const simpleWindow = (options) => {
   const {
     content, width, height, attributes = {}, backgroundColor = '#FFFFFF',
     foregroundColor = '#000000', noStretch = false, title = '', minWidth = 0,
@@ -126,5 +126,5 @@ ${image}`
  * @prop {boolean} [minify=true] Remove whitespace between tags (e.g., between `>` and `<`). If there are any problems with generated SVG, this could be disabled. Default `true`.
  */
 
-module.exports=terminal
+module.exports=simpleWindow
 //# sourceMappingURL=index.js.map
