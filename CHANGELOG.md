@@ -1,5 +1,9 @@
 ## 8 September 2018
 
+### 1.0.2
+
+- [doc] fix no-shadow example, insert absolute images to show on npm.
+
 ### 1.0.1
 
 - [package] Distribute `types` to be read by `svag` meta-package.
