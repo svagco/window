@@ -50,8 +50,6 @@ __<a name="windowoptions">`WindowOptions`</a>__
 | minify | _boolean_ | Remove whitespace between tags (e.g., between `>` and `<`). If there are any problems with generated SVG, this could be disabled. | `true` |
 
 ```js
-import { writeFileSync } from 'fs'
-/* start example */
 import { makeElement } from '@svag/lib'
 import Window from '@svag/window'
 
@@ -84,9 +82,6 @@ const res = Window({
   content: [content, content2].join('\n'),
   minify: false,
 })
-
-console.log(res)
-writeFileSync('images/window.svg', res)
 ```
 
 ```svg

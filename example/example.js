@@ -33,5 +33,6 @@ const res = Window({
   minify: false,
 })
 
+/* end example */
 console.log(res)
 writeFileSync('images/window.svg', res)
