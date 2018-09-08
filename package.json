@@ -44,7 +44,15 @@
     "browser",
     "mac",
     "macOS",
-    "OS X"
+    "yosemite",
+    "sierra",
+    "el capitan",
+    "OS X",
+    "UI",
+    "interface",
+    "mockup",
+    "mock-up",
+    "wireframe"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
