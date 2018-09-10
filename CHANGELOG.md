@@ -1,3 +1,11 @@
+## 11 September 2018
+
+### 1.1.0
+
+- [feature] Standalone shadow to prevent quality loss.
+- [deps] Update dependencies.
+- [doc] Move `window` image up.
+
 ## 8 September 2018
 
 ### 1.0.2
