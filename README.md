@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40svag%2Fwindow.svg)](https://npmjs.org/package/@svag/window)
 
-`@svag/window` is a simple window with a shadow and toolbar.
+`@svag/window` is a simple macOS-style window with a shadow and toolbar.
 
 ```sh
 yarn add -E @svag/window
@@ -29,6 +29,8 @@ import Window from '@svag/window'
 ### `window(`<br/>&nbsp;&nbsp;`options: WindowOptions,`<br/>`): string`
 
 Creates a complete `SVG` representing a macOS window.
+
+<img alt="window of a terminal" src="https://raw.github.com/svagco/window/master/images/window.svg?sanitize=true">
 
 __<a name="windowoptions">`WindowOptions`</a>__
 
@@ -145,8 +147,6 @@ const res = Window({
   </g>
 </svg>
 ```
-
-<img alt="window of a terminal" src="https://raw.github.com/svagco/window/master/images/window.svg?sanitize=true">
 
 To generate a window <a name="without-a-shadow">without a shadow</a>, the `noShadow` option can be set. When `minify` attribute is not set to `false`, the whitespace will be removed.
 
