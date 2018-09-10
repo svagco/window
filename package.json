@@ -1,6 +1,6 @@
 {
   "name": "@svag/window",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A simple macOS-style window with a shadow and toolbar.",
   "main": "build",
   "scripts": {
