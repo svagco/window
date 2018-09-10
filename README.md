@@ -134,7 +134,7 @@ const res = Window({
     <line y1="22" x2="360" y2="22" stroke="#7E7E7E" shape-rendering="crispEdges"/>
     <g transform="translate(5, 28)" fill="#000000">
       <text font-family="Monaco, Courier" font-size="12px" x="0" y="10">
-        Last login: Mon Sep 10 2018 on ttys013
+        Last login: Tue Sep 11 2018 on ttys013
       </text>
       <text font-family="Monaco, Courier" font-size="12px" x="0" y="25">
         svag-macbook:~ svag$ 
@@ -188,7 +188,7 @@ const res = Window({
         🚞 Terminal
       </text><g transform="translate(9, 6)"><g><circle stroke="#E33E32" stroke-width="1" cx="5" cy="5" r="5.5"/><circle fill="#FF5F52" cx="5" cy="5" r="5.25"/></g><g><circle stroke="#E2A100" stroke-width="1" cx="25" cy="5" r="5.5"/><circle fill="#FFBE05" cx="25" cy="5" r="5.25"/></g><g><circle stroke="#17B230" stroke-width="1" cx="45" cy="5" r="5.5"/><circle fill="#15CC35" cx="45" cy="5" r="5.25"/></g></g></g><path d="M360,22 L360,126 C 360 129, 357 132, 354 132 L6,132 C 3 132, 0 129, 0 126 L0,22 Z"
           fill="#FFFFFF"/><line y1="22" x2="360" y2="22" stroke="#7E7E7E" shape-rendering="crispEdges"/><g transform="translate(5, 28)" fill="#000000"><text font-family="Monaco, Courier" font-size="12px" x="0" y="10">
-        Last login: Mon Sep 10 2018 on ttys013
+        Last login: Tue Sep 11 2018 on ttys013
       </text><text font-family="Monaco, Courier" font-size="12px" x="0" y="25">
         svag-macbook:~ svag$ 
       </text></g></g></svg>

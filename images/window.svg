@@ -47,7 +47,7 @@
     <line y1="22" x2="360" y2="22" stroke="#7E7E7E" shape-rendering="crispEdges"/>
     <g transform="translate(5, 28)" fill="#000000">
       <text font-family="Monaco, Courier" font-size="12px" x="0" y="10">
-        Last login: Mon Sep 10 2018 on ttys013
+        Last login: Tue Sep 11 2018 on ttys013
       </text>
       <text font-family="Monaco, Courier" font-size="12px" x="0" y="25">
         svag-macbook:~ svag$ 

@@ -16,19 +16,21 @@
   dependencies:
     restream "3.1.1"
 
-"@svag/lib@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@svag/lib/-/lib-1.0.0.tgz#45e439c9b361fbe8307299f99f5e937390f2e510"
+"@svag/lib@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@svag/lib/-/lib-2.0.0.tgz#8cf60690eed5d361eb8fad482592504a71335292"
 
-"@svag/shadow@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@svag/shadow/-/shadow-1.0.0.tgz#fed7e610ca514b2ac06b118575409e3ac8022299"
-
-"@svag/toolbar@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@svag/toolbar/-/toolbar-1.0.0.tgz#bbf227d92257a5e5e6620bb1ecc6074128cb4a51"
+"@svag/shadow@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@svag/shadow/-/shadow-2.0.0.tgz#f9146b4ab388c5a7992a0dec662075b0888b98f2"
   dependencies:
-    "@svag/lib" "1.0.0"
+    "@svag/lib" "2.0.0"
+
+"@svag/toolbar@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@svag/toolbar/-/toolbar-1.0.1.tgz#103395665189fa6f2bfc8c7bdd95611ad18b9ac4"
+  dependencies:
+    "@svag/lib" "2.0.0"
 
 "@wrote/ensure-path@1.0.2":
   version "1.0.2"
