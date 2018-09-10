@@ -88,16 +88,12 @@ const res = Window({
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0, 0, 472, 244" width="472px" height="244px">
-  <g transform="translate(55, 25)" filter="url(#shadow)" fill="none">
+  <g transform="translate(55, 25)" filter="url(#shadow)">
     <defs>
       <filter x="-16%" y="-19%" width="132%" height="180%" id="shadow">
-        <feOffset dy="25" in="SourceAlpha" result="so"/>
-        <feGaussianBlur stdDeviation="27.5" in="so" result="sb"/>
-        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" in="sb" result="sm"/>
-        <feMerge>
-          <feMergeNode in="sm"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
+        <feOffset dy="25" in="SourceAlpha" result="o"/>
+        <feGaussianBlur stdDeviation="27.5" in="o" result="b"/>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" in="b"/>
       </filter>
     </defs>
     <rect height="132" width="360" rx="6" ry="6" fill="white"/>
