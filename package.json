@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@svag/lib": "2.0.0",
-    "@svag/shadow": "2.0.0",
+    "@svag/shadow": "2.0.1",
     "@svag/toolbar": "1.0.1"
   }
 }

@@ -20,9 +20,9 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@svag/lib/-/lib-2.0.0.tgz#8cf60690eed5d361eb8fad482592504a71335292"
 
-"@svag/shadow@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@svag/shadow/-/shadow-2.0.0.tgz#f9146b4ab388c5a7992a0dec662075b0888b98f2"
+"@svag/shadow@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@svag/shadow/-/shadow-2.0.1.tgz#678064c63ea7ca59271b544f794e73d3f87dc8bf"
   dependencies:
     "@svag/lib" "2.0.0"
 
