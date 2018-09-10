@@ -1,5 +1,9 @@
 ## 11 September 2018
 
+### 1.1.1
+
+- [deps] Update `@svag/window`.
+
 ### 1.1.0
 
 - [feature] Standalone shadow to prevent quality loss; remove some unnecessary attributes.
