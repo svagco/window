@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs'
 import { makeElement } from '@svag/lib'
 import Window from '../src'
 
-const content = makeElement({
+const line = makeElement('text', {
   name: 'text',
   attributes: {
     'font-family': 'Monaco, Courier',
@@ -13,8 +13,7 @@ const content = makeElement({
   },
   content: `Last login: ${new Date().toDateString()} on ttys013`,
 })
-const content2 = makeElement({
-  name: 'text',
+const line2 = makeElement('text', {
   attributes: {
     'font-family': 'Monaco, Courier',
     'font-size': '12px',
@@ -29,7 +28,7 @@ const res = Window({
   width: 350,
   height: 100,
   noStretch: true,
-  content: [content, content2].join('\n'),
+  content: [line, line2],
   noShadow: true,
 })
 
