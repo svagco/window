@@ -2,7 +2,7 @@
 
 ### 1.1.0
 
-- [feature] Standalone shadow to prevent quality loss.
+- [feature] Standalone shadow to prevent quality loss; remove some unnecessary attributes.
 - [deps] Update dependencies.
 - [doc] Move `window` image up.
 
