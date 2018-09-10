@@ -1,4 +1,4 @@
-const { roundedCorner, minify: min, svg, makeElement } = require('@svag/lib');
+const { roundedCorner, minify: min, svg, makeElement, rect } = require('@svag/lib');
 let Toolbar = require('@svag/toolbar'); if (Toolbar && Toolbar.__esModule) Toolbar = Toolbar.default;
 let Shadow = require('@svag/shadow'); if (Shadow && Shadow.__esModule) Shadow = Shadow.default;
 
@@ -22,13 +22,13 @@ let Shadow = require('@svag/shadow'); if (Shadow && Shadow.__esModule) Shadow = 
  */
 const simpleWindow = (options) => {
   const {
-    content, width, height, attributes = {}, backgroundColor = '#FFFFFF',
+    content, width: contentWidth, height: contentHeight, attributes = {}, backgroundColor = '#FFFFFF',
     foregroundColor = '#000000', noStretch = false, title = '', minWidth = 0,
     minHeight = 0, paddingY = 5, paddingX = 5, noShadow = false, minify = true,
   } = options
   const tbHeight = 22
-  const w = Math.max(minWidth, width + (paddingX * 2))
-  const h = Math.max(minHeight, height + tbHeight + (paddingY * 2))
+  const windowWidth = Math.max(minWidth, contentWidth + (paddingX * 2))
+  const windowHeight = Math.max(minHeight, contentHeight + tbHeight + (paddingY * 2))
   const lineY = tbHeight
   const lnHeight = 1
   const bodyY = lineY + lnHeight
@@ -37,41 +37,43 @@ const simpleWindow = (options) => {
   const borderColor = '#000000'
   const bAlpha = '0.2'
   const blurStd = 27.5
-  const blurOffsetY = 25
-  const ww = (noShadow ? 0 : blurStd * 4) + w + 2
-  const hh = (noShadow ? 0 : blurStd * 4) + h + 2
+  const margin = (noShadow ? 0 : blurStd * 4)
+  const svgWidth = margin + windowWidth + 2
+  const svgHeight = margin + windowHeight + 2
 
-  const filter = noShadow ? undefined : Shadow({
-    width: w, height: h,
+  const { translateX, translateY, shadow } = noShadow ? { translateX: 1, translateY: 1 } : Shadow({
+    width: windowWidth,
+    height: windowHeight,
   })
+  const translate = `translate(${translateX}, ${translateY})`
   const toolbar = Toolbar({
-    width: w,
+    width: windowWidth,
     title,
   })
-  const rect = makeElement({ // the rounded stroke around the window
-    name: 'rect',
-    attributes: {
-      height: h,
-      width: w,
-      rx: rd2,
-      stroke: borderColor,
-      'stroke-opacity': bAlpha,
-    },
+  const border = rect({ // the rounded stroke around the window
+    width: windowWidth,
+    height: windowHeight,
+    rx: rd2,
+    ry: rd2,
+    stroke: borderColor,
+    'stroke-opacity': bAlpha,
   })
-  const line = makeElement({
-    name: 'line',
+  const line = makeElement('line', {
     attributes: {
-      x1: 0,
-      y1: lineY + 0.5,
-      x2: w,
-      y2: lineY + 0.5,
+      y1: lineY,
+      x2: windowWidth,
+      y2: lineY,
       stroke: '#7E7E7E',
       'shape-rendering': 'crispEdges',
     },
   })
-  const bg = `<path d="M${w},${lineY} L${w},${h - rd2} ${roundedCorner({ x: w, y: h - rd2 }, { x: w - rd2, y: h })} L${rd2},${h} ${roundedCorner({ x: rd2, y: h }, { x: 0, y: h - rd2 })} L0,${lineY} Z" fill="${backgroundColor}"/>`
-  const holder = makeElement({
-    name: 'g',
+  const bg = makeElement('path', {
+    attributes: {
+      d: `M${windowWidth},${lineY} L${windowWidth},${windowHeight - rd2} ${roundedCorner({ x: windowWidth, y: windowHeight - rd2 }, { x: windowWidth - rd2, y: windowHeight })} L${rd2},${windowHeight} ${roundedCorner({ x: rd2, y: windowHeight }, { x: 0, y: windowHeight - rd2 })} L0,${lineY} Z`,
+      fill: backgroundColor,
+    },
+  })
+  const holder = makeElement('g', {
     attributes: {
       transform: `translate(${paddingX}, ${bodyY + paddingY})`,
       fill: foregroundColor,
@@ -79,26 +81,23 @@ const simpleWindow = (options) => {
     },
     content,
   })
-  const rootElement = makeElement({
-    name: 'g',
+  const window = makeElement('g', {
     attributes: {
-      transform: noShadow ? 'translate(1, 1)' : `translate(${blurStd * 2}, ${blurOffsetY})`,
-      filter: noShadow ? undefined : 'url(#shadow)',
+      transform: translate,
       fill: 'none',
     },
     content: [
-      filter,
-      rect,
+      border,
       toolbar,
       bg,
       line,
       holder,
-    ].join('\n'),
+    ],
   })
   const image = svg({
-    width: ww,
-    height: hh,
-    content: `\n${rootElement}`,
+    width: svgWidth,
+    height: svgHeight,
+    content: [shadow, window],
     stretch: !noStretch,
   })
   const win = `<?xml version="1.0" encoding="utf-8"?>

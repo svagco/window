@@ -37,13 +37,15 @@ const simpleWindow = (options) => {
   const borderColor = '#000000'
   const bAlpha = '0.2'
   const blurStd = 27.5
-  const svgWidth = (noShadow ? 0 : blurStd * 4) + windowWidth + 2
-  const svgHeight = (noShadow ? 0 : blurStd * 4) + windowHeight + 2
+  const margin = (noShadow ? 0 : blurStd * 4)
+  const svgWidth = margin + windowWidth + 2
+  const svgHeight = margin + windowHeight + 2
 
-  const { translate, shadow } = noShadow ? { translate: 'translate(1, 1)' } : Shadow({
+  const { translateX, translateY, shadow } = noShadow ? { translateX: 1, translateY: 1 } : Shadow({
     width: windowWidth,
     height: windowHeight,
   })
+  const translate = `translate(${translateX}, ${translateY})`
   const toolbar = Toolbar({
     width: windowWidth,
     title,
